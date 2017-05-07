@@ -1,0 +1,6 @@
+#+TITLE: 用 Bundler 安装的 Github gem 的安装位置
+#+AUTHOR: Liu Xiang
+
+#+BEGIN_SRC sh
+  echo $(gem environ | sed -n '/GEM PATHS/{n;s#.*- ##;p;}')/bundler/gems
+#+END_SRC
